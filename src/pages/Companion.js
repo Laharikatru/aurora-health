@@ -86,7 +86,7 @@ Always respond in English. Be supportive and personal.`;
         temperature: 0.8
       }, {
         headers: {
-          Authorization: `Bearer ${AI_KEY}`,
+          Authorization: `Bearer ${GROQ_KEY}`,
           'Content-Type': 'application/json'
         }
       });
