@@ -3,7 +3,7 @@ import { useApp } from '../context/AppContext';
 import axios from 'axios';
 
 const AI_URL = 'https://api.groq.com/openai/v1/chat/completions';
-const GROQ_KEY = process.env.REACT_APP_GROQ_KEY;
+const GROQ_KEY = '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';
 export default function Companion() {
   const { aiMessages, setAiMessages, hydration, sleep, habits, meals, addWater, logSleep, toggleHabit } = useApp();
   const [input, setInput] = useState('');
