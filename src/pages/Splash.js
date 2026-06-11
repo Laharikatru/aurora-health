@@ -14,8 +14,6 @@ export default function Splash() {
   const [slide, setSlide] = useState(0);
 
   useEffect(() => {
-    const savedUser = localStorage.getItem('aurora_user');
-    if (savedUser) { setCurrentPage('home'); return; }
     const timer = setInterval(() => {
       setSlide(s => { if (s >= slides.length - 1) { clearInterval(timer); } return Math.min(s + 1, slides.length - 1); });
     }, 2000);
