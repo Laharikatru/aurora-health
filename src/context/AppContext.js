@@ -28,10 +28,8 @@ export const AppProvider = ({ children }) => {
       const u = JSON.parse(savedUser);
       setUser(u);
       loadFromFirestore(u.uid || u.email);
-      setCurrentPage('home');
     }
   }, []);
-
   const loadFromFirestore = async (userId) => {
     try {
       const snap = await getDoc(doc(db, 'users', userId, 'healthData', 'current'));
