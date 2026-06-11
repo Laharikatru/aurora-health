@@ -24,8 +24,8 @@ export default function Login() {
     };
     localStorage.setItem('aurora_user', JSON.stringify(u));
     setUser(u);
-    setCurrentPage('home');
-  };
+const isNew = !localStorage.getItem('aurora_onboarded');
+  setCurrentPage(isNew ? 'onboarding' : 'home');  };
 
   const handleEmailAuth = async () => {
     if (!email || !password) { setError('Please fill in all fields'); return; }
