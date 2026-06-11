@@ -41,8 +41,7 @@ export default function Splash() {
             <div key={i} className={`onboarding-dot ${i === slide ? 'active' : ''}`} onClick={() => setSlide(i)} style={{ cursor: 'pointer' }} />
           ))}
         </div>
-        <button className="btn-primary" style={{ width: 300 }} onClick={() => setCurrentPage('onboarding')}>
-          Get Started →
+<button className="btn-primary" style={{ width: 300 }} onClick={() => setCurrentPage('login')}>          Get Started →
         </button>
         <button className="btn-secondary" style={{ width: 300, marginTop: 12 }} onClick={() => setCurrentPage('login')}>
           I already have an account
