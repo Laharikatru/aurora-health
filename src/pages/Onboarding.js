@@ -64,6 +64,8 @@ export default function Onboarding() {
   const handleFinish = () => {
     const userData = { ...form, hydrationGoal: parseInt(form.weight) * 33 || 2500 };
     localStorage.setItem('aurora_user', JSON.stringify(userData));
+        localStorage.setItem('aurora_onboarded', 'true');
+
     setUser(userData);
     setCurrentPage('home');
   };
